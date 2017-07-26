@@ -1,2 +1,2 @@
 # Leetcode
-Practice on Leetcode and save some answers
+Practice on Leetcode in Java.
