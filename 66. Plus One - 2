@@ -1,12 +1,13 @@
 public class Solution {
     public int[] plusOne(int[] digits) {
         int len = digits.length;
+        int[] arr = Arrays.copyOf(digits, len);
         for (int i = len - 1; i >= 0; i--) {
-            if (digits[i] < 9) {
-                digits[i]++;
-                return digits;
+            if (arr[i] < 9) {
+                arr[i]++;
+                return arr;
             }
-            digits[i] = 0;
+            arr[i] = 0;
         }
         int[] plusOne = new int[len + 1];
         plusOne[0] = 1;
