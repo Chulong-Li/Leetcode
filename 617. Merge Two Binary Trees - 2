@@ -12,6 +12,7 @@ public class Solution {
         if (t1 == null && t2 == null) return null;
         else if (t1 == null) return t2;
         else if (t2 == null) return t1;
+        // ***The problem is that the recursive will not create new  treenodes for t1 only part and t2 only part.***
         TreeNode node = new TreeNode(t1.val + t2.val);
         node.left = mergeTrees(t1.left, t2.left);
         node.right = mergeTrees(t1.right, t2.right);
