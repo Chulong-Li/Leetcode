@@ -3,7 +3,7 @@ public class Solution {
         int[] index = new int[256];
         int max = 0;
         for (int i = 0, j = 0; i < s.length(); i++) {
-            j = Math.max(index[s.charAt(j)], i);
+            j = Math.max(index[s.charAt(i)], j);
             max = Math.max(max, i - j + 1);
             index[s.charAt(i)] = i + 1;
         }
